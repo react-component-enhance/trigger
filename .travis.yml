@@ -1,31 +1,38 @@
 language: node_js
-
 sudo: false
-
 notifications:
   email:
-  - yiminghe@gmail.com
-
+  - ZxBing0066@gmail.com
 node_js:
 - 6.9.1
-
 before_install:
 - |
-    if ! git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qvE '(\.md$)|(^(docs|examples))/'
-    then
-      echo "Only docs were updated, stopping build process."
-      exit
-    fi
-    phantomjs --version
+  if ! git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qvE '(\.md$)|(^(docs|examples))/'
+  then
+    echo "Only docs were updated, stopping build process."
+    exit
+  fi
+  phantomjs --version
 script:
 - |
-    if [ "$TEST_TYPE" = test ]; then
-      npm test
-    else
-      npm run $TEST_TYPE
-    fi
+  if [ "$TEST_TYPE" = test ]; then
+    npm test
+  else
+    npm run $TEST_TYPE
+  fi
 env:
   matrix:
   - TEST_TYPE=lint
   - TEST_TYPE=test
   - TEST_TYPE=coverage
+deploy:
+  - provider: npm
+    skip_cleanup: true
+    email: ZxBing0066@gmail.com
+    api_key:
+      secure: LRcsOY3Uec1Tw2ROY7MUyiOTHWRk4ROcf4W/uiP9kg5n6qfcG3CsgRJG9ZW5mSVWPKZKWRhEADFOShwEoj04bSjv4ZTFyMxaSxKfMmaFUbyCTCD5C87JdEyPa1vOt7l5SuupNJ+hYPBm6cw8fOTsOm1K9infoP4HiFeqUmbB/kP0Oy4u9CzrSS/MsV/zsNwyNiC7UUTp+QG/y6i2JlRodDKoplK9ZziLEgdT+gn+i/VnX2SiFrADTEFaN5TMI2+DK/EiDyZ+NtVoq1Ns6qPxoRYdqfPpgBVCRSNxVlnNyb9DjFPGehwOEv8oDPGDF2eOQ3wGR9EwoV4qjDtbvOJQDVIb9JoJMKmNFAoAdyhHxB2udjeUsV5cw1xmZZAix350gj0d6bV1Rl3pi5n95rkzxrD54BVpJyzZOV43bc7Usv1/VJfX3rh8PtilZ8oF4KNfg+Fr8H4uss9HgSm+z+9OD3cs0qISdSPBVcW41OZX476lJdZynwkACZyPn9P1VJFJ6VAEtLoPsPAkof/gJ0eiupXvKRTDuhRETgxnZJbwhBIsUeLFLSzc67ZVMZHP+vk4j1FdQjeUvWk8d9RpibzIg9Pq3MjJi7wkszd5ZZ8QnvSkewj6aMV+M9tyGfJQBH4CeZaD16PmxxFEYmu1t1JuEubM51Km+Hwo089vgjwX60k=
+    on:
+      tags: true
+      branch: master
+      tag: next
+      condition: "$TEST_TYPE = lint"

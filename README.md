@@ -1,4 +1,4 @@
-# rc-trigger
+# rce-trigger
 ---
 
 React Trigger Component
@@ -10,18 +10,18 @@ React Trigger Component
 [![gemnasium deps][gemnasium-image]][gemnasium-url]
 [![npm download][download-image]][download-url]
 
-[npm-image]: http://img.shields.io/npm/v/rc-trigger.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/rc-trigger
-[travis-image]: https://img.shields.io/travis/react-component/trigger.svg?style=flat-square
-[travis-url]: https://travis-ci.org/react-component/trigger
-[coveralls-image]: https://img.shields.io/coveralls/react-component/trigger.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/react-component/trigger?branch=master
-[gemnasium-image]: http://img.shields.io/gemnasium/react-component/trigger.svg?style=flat-square
-[gemnasium-url]: https://gemnasium.com/react-component/trigger
+[npm-image]: http://img.shields.io/npm/v/rce-trigger.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/rce-trigger
+[travis-image]: https://img.shields.io/travis/react-component-enhance/trigger.svg?style=flat-square
+[travis-url]: https://travis-ci.org/react-component-enhance/trigger
+[coveralls-image]: https://img.shields.io/coveralls/react-component-enhance/trigger.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/react-component-enhance/trigger?branch=master
+[gemnasium-image]: http://img.shields.io/gemnasium/react-component-enhance/trigger.svg?style=flat-square
+[gemnasium-url]: https://gemnasium.com/react-component-enhance/trigger
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
-[download-image]: https://img.shields.io/npm/dm/rc-trigger.svg?style=flat-square
-[download-url]: https://npmjs.org/package/rc-trigger
+[download-image]: https://img.shields.io/npm/dm/rce-trigger.svg?style=flat-square
+[download-url]: https://npmjs.org/package/rce-trigger
 
 
 ## Browser Support
@@ -42,7 +42,7 @@ npm start
 
 http://localhost:8200/examples/
 
-online example: http://react-component.github.io/trigger/examples/
+online example: http://react-component-enhance.github.io/trigger/examples/
 
 ## Feature
 
@@ -50,16 +50,16 @@ online example: http://react-component.github.io/trigger/examples/
 
 ## install
 
-[![rc-trigger](https://nodei.co/npm/rc-trigger.png)](https://npmjs.org/package/rc-trigger)
+[![rce-trigger](https://nodei.co/npm/rce-trigger.png)](https://npmjs.org/package/rce-trigger)
 
 ## Usage
 
-Include the default [styling](https://github.com/react-component/trigger/blob/master/assets/index.less#L4:L11) and then:
+Include the default [styling](https://github.com/react-component-enhance/trigger/blob/master/assets/index.less#L4:L11) and then:
 
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Trigger from 'rc-trigger';
+import Trigger from 'rce-trigger';
 
 ReactDOM.render((
   <Trigger
@@ -140,7 +140,7 @@ ReactDOM.render((
         <tr>
           <td>prefixCls</td>
           <td>String</td>
-          <td>rc-trigger-popup</td>
+          <td>rce-trigger-popup</td>
           <td>prefix class name</td>
         </tr>
         <tr>
@@ -318,4 +318,4 @@ class App extends React.Component {
 
 ## License
 
-rc-trigger is released under the MIT license.
+rce-trigger is released under the MIT license.

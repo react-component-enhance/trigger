@@ -71,7 +71,7 @@ export default class Trigger extends React.Component {
   };
 
   static defaultProps = {
-    prefixCls: 'rc-trigger-popup',
+    prefixCls: 'rce-trigger-popup',
     getPopupClassNameFromAlign: returnEmptyString,
     getDocument: returnDocument,
     onPopupVisibleChange: noop,

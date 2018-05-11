@@ -2,8 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Trigger from 'rc-trigger';
-import 'rc-trigger/assets/index.less';
+import Trigger from 'rce-trigger';
+import 'rce-trigger/assets/index.less';
 
 function getPopupAlign(state) {
   return {
@@ -170,10 +170,10 @@ class Test extends React.Component {
         &nbsp;&nbsp;&nbsp;&nbsp;
         <label>
           <input
-            value="rc-trigger-popup-zoom"
+            value="rce-trigger-popup-zoom"
             type="checkbox"
             onChange={this.onTransitionChange}
-            checked={state.transitionName === 'rc-trigger-popup-zoom'}
+            checked={state.transitionName === 'rce-trigger-popup-zoom'}
           />
           transitionName
         </label>

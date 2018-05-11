@@ -81,7 +81,7 @@ const placementAlignMap = {
   },
 };
 
-describe('rc-trigger', function main() {
+describe('rce-trigger', function main() {
   this.timeout(40000);
   const div = document.createElement('div');
   div.style.margin = '100px';
