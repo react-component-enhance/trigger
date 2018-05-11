@@ -269,44 +269,52 @@ class Test extends React.Component {
         &nbsp;&nbsp;&nbsp;&nbsp;
         <button onClick={this.destroy}>destroy</button>
       </div>
-      <div style={{ margin: 120, position: 'relative' }}>
-        <Trigger
-          getPopupContainer={undefined && getPopupContainer}
-          popupAlign={getPopupAlign(state)}
-          popupPlacement={state.placement}
-          destroyPopupOnHide={this.state.destroyPopupOnHide}
-          // zIndex={40}
-          mask={this.state.mask}
-          maskClosable={this.state.maskClosable}
-          stretch={this.state.stretch}
-          // maskAnimation="fade"
-          // mouseEnterDelay={0.1}
-          // mouseLeaveDelay={0.1}
-          action={Object.keys(state.trigger)}
-          builtinPlacements={builtinPlacements}
-          popupStyle={{
-            border: '1px solid red',
-            padding: 10,
-            background: 'white',
-            boxSizing: 'border-box',
-          }}
-          popup={
-            <div>
-              i am a popup
-            </div>
-          }
-          popupTransitionName={state.transitionName}
-        >
-          <a
-            style={{ margin: 20, display: 'inline-block', background: `rgba(255, 0, 0, 0.05)` }}
-            href="#"
-            onClick={preventDefault}
+      <div
+        style={{
+          height: 300,
+          overflow: 'auto',
+          border: '1px solid red',
+        }}
+      >
+        <div style={{ margin: 120, position: 'relative', height: 800 }}>
+          <Trigger
+            getPopupContainer={undefined && getPopupContainer}
+            popupAlign={getPopupAlign(state)}
+            popupPlacement={state.placement}
+            destroyPopupOnHide={this.state.destroyPopupOnHide}
+            // zIndex={40}
+            mask={this.state.mask}
+            maskClosable={this.state.maskClosable}
+            stretch={this.state.stretch}
+            // maskAnimation="fade"
+            // mouseEnterDelay={0.1}
+            // mouseLeaveDelay={0.1}
+            action={Object.keys(state.trigger)}
+            builtinPlacements={builtinPlacements}
+            popupStyle={{
+              border: '1px solid red',
+              padding: 10,
+              background: 'white',
+              boxSizing: 'border-box',
+            }}
+            popup={
+              <div>
+                i am a popup
+              </div>
+            }
+            popupTransitionName={state.transitionName}
           >
-            <p>This is a example of trigger usage.</p>
-            <p>You can adjust the value above</p>
-            <p>which will also change the behaviour of popup.</p>
-          </a>
-        </Trigger>
+            <a
+              style={{ margin: 20, display: 'inline-block', background: `rgba(255, 0, 0, 0.05)` }}
+              href="#"
+              onClick={preventDefault}
+            >
+              <p>This is a example of trigger usage.</p>
+              <p>You can adjust the value above</p>
+              <p>which will also change the behaviour of popup.</p>
+            </a>
+          </Trigger>
+        </div>
       </div>
     </div>);
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import Align from 'rc-align';
+import Align from 'rce-align';
 import Animate from 'rc-animate';
 import PopupInner from './PopupInner';
 import LazyRenderBox from './LazyRenderBox';
@@ -182,6 +182,7 @@ class Popup extends Component {
               key="popup"
               ref={this.saveAlignRef}
               monitorWindowResize
+              monitorWindowScroll
               align={align}
               onAlign={this.onAlign}
             >
@@ -209,6 +210,7 @@ class Popup extends Component {
           key="popup"
           ref={this.saveAlignRef}
           monitorWindowResize
+          monitorWindowScroll
           xVisible={visible}
           childrenProps={{ visible: 'xVisible' }}
           disabled={!visible}
