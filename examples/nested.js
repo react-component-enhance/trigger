@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 72:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(73);
+module.exports = __webpack_require__(71);
 
 
 /***/ }),
 
-/***/ 73:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17,9 +17,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rc_trigger__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_trigger_assets_index_less__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_trigger_assets_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rc_trigger_assets_index_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rce_trigger__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rce_trigger_assets_index_less__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rce_trigger_assets_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rce_trigger_assets_index_less__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -89,7 +89,7 @@ var Test = function (_React$Component) {
       { style: popupBorderStyle },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { ref: this.saveContainerRef }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_2_rc_trigger__["a" /* default */],
+        __WEBPACK_IMPORTED_MODULE_2_rce_trigger__["a" /* default */],
         {
           popupPlacement: 'bottom',
           action: ['click'],
@@ -117,7 +117,7 @@ var Test = function (_React$Component) {
         'div',
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2_rc_trigger__["a" /* default */],
+          __WEBPACK_IMPORTED_MODULE_2_rce_trigger__["a" /* default */],
           {
             popupPlacement: 'left',
             action: ['click'],
@@ -132,7 +132,7 @@ var Test = function (_React$Component) {
             'span',
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_rc_trigger__["a" /* default */],
+              __WEBPACK_IMPORTED_MODULE_2_rce_trigger__["a" /* default */],
               {
                 popupPlacement: 'bottom',
                 action: ['hover'],
@@ -156,7 +156,7 @@ var Test = function (_React$Component) {
         'div',
         { style: { margin: 50 } },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2_rc_trigger__["a" /* default */],
+          __WEBPACK_IMPORTED_MODULE_2_rce_trigger__["a" /* default */],
           {
             popupPlacement: 'right',
             action: ['hover'],
@@ -184,5 +184,5 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 
 /***/ })
 
-},[72]);
+},[70]);
 //# sourceMappingURL=nested.js.map

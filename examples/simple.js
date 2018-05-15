@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 153:
+/***/ 152:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(154);
+module.exports = __webpack_require__(153);
 
 
 /***/ }),
 
-/***/ 154:
+/***/ 153:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17,11 +17,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rc_trigger__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_trigger_assets_index_less__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_trigger_assets_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rc_trigger_assets_index_less__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_object_assign__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_object_assign__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rce_trigger__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rce_trigger_assets_index_less__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rce_trigger_assets_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rce_trigger_assets_index_less__);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -29,7 +29,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /* eslint no-console:0 */
-
 
 
 
@@ -101,17 +100,22 @@ var Test = function (_React$Component) {
         hover: 1
       },
       offsetX: undefined,
-      offsetY: undefined
+      offsetY: undefined,
+      stretch: ''
     }, _this.onPlacementChange = function (e) {
       _this.setState({
         placement: e.target.value
+      });
+    }, _this.onStretch = function (e) {
+      _this.setState({
+        stretch: e.target.value
       });
     }, _this.onTransitionChange = function (e) {
       _this.setState({
         transitionName: e.target.checked ? e.target.value : ''
       });
     }, _this.onTriggerChange = function (e) {
-      var trigger = __WEBPACK_IMPORTED_MODULE_4_object_assign___default()({}, _this.state.trigger);
+      var trigger = _extends({}, _this.state.trigger);
       if (e.target.checked) {
         trigger[e.target.value] = 1;
       } else {
@@ -216,11 +220,46 @@ var Test = function (_React$Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'label',
           null,
+          'Stretch:',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'select',
+            { value: state.stretch, onChange: this.onStretch },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: '' },
+              '--NONE--'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'width' },
+              'width'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'minWidth' },
+              'minWidth'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'height' },
+              'height'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'minHeight' },
+              'minHeight'
+            )
+          )
+        ),
+        '\xA0\xA0\xA0\xA0',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'label',
+          null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
-            value: 'rc-trigger-popup-zoom',
+            value: 'rce-trigger-popup-zoom',
             type: 'checkbox',
             onChange: this.onTransitionChange,
-            checked: state.transitionName === 'rc-trigger-popup-zoom'
+            checked: state.transitionName === 'rce-trigger-popup-zoom'
           }),
           'transitionName'
         ),
@@ -333,33 +372,68 @@ var Test = function (_React$Component) {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { style: { margin: 100, position: 'relative' } },
+        {
+          style: {
+            height: 300,
+            overflow: 'auto',
+            border: '1px solid red'
+          }
+        },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2_rc_trigger__["a" /* default */],
-          {
-            getPopupContainer: undefined && getPopupContainer,
-            popupAlign: getPopupAlign(state),
-            popupPlacement: state.placement,
-            destroyPopupOnHide: this.state.destroyPopupOnHide
-            // zIndex={40}
-            , mask: this.state.mask,
-            maskClosable: this.state.maskClosable
-            // maskAnimation="fade"
-            // mouseEnterDelay={0.1}
-            // mouseLeaveDelay={0.1}
-            , action: Object.keys(state.trigger),
-            builtinPlacements: builtinPlacements,
-            popup: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { style: { border: '1px solid red', padding: 10, background: 'white' } },
-              'i am a popup'
-            ),
-            popupTransitionName: state.transitionName
-          },
+          'div',
+          { style: { margin: 120, position: 'relative', height: 800 } },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            { href: '#', style: { margin: 20 }, onClick: preventDefault },
-            'trigger'
+            __WEBPACK_IMPORTED_MODULE_2_rce_trigger__["a" /* default */],
+            {
+              getPopupContainer: undefined && getPopupContainer,
+              popupAlign: getPopupAlign(state),
+              popupPlacement: state.placement,
+              destroyPopupOnHide: this.state.destroyPopupOnHide
+              // zIndex={40}
+              , mask: this.state.mask,
+              maskClosable: this.state.maskClosable,
+              stretch: this.state.stretch
+              // maskAnimation="fade"
+              // mouseEnterDelay={0.1}
+              // mouseLeaveDelay={0.1}
+              , action: Object.keys(state.trigger),
+              builtinPlacements: builtinPlacements,
+              popupStyle: {
+                border: '1px solid red',
+                padding: 10,
+                background: 'white',
+                boxSizing: 'border-box'
+              },
+              popup: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                'i am a popup'
+              ),
+              popupTransitionName: state.transitionName
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              {
+                style: { margin: 20, display: 'inline-block', background: 'rgba(255, 0, 0, 0.05)' },
+                href: '#',
+                onClick: preventDefault
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                null,
+                'This is a example of trigger usage.'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                null,
+                'You can adjust the value above'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                null,
+                'which will also change the behaviour of popup.'
+              )
+            )
           )
         )
       )
@@ -373,5 +447,5 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 
 /***/ })
 
-},[153]);
+},[152]);
 //# sourceMappingURL=simple.js.map
