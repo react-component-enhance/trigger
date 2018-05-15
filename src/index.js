@@ -46,6 +46,7 @@ export default class Trigger extends React.Component {
       PropTypes.string,
       PropTypes.object,
     ]),
+    autoMount: PropTypes.bool,
     popupAnimation: PropTypes.any,
     mouseEnterDelay: PropTypes.number,
     mouseLeaveDelay: PropTypes.number,
@@ -78,6 +79,7 @@ export default class Trigger extends React.Component {
     afterPopupVisibleChange: noop,
     onPopupAlign: noop,
     popupClassName: '',
+    autoMount: false,
     mouseEnterDelay: 0,
     mouseLeaveDelay: 0.1,
     focusDelay: 0,
@@ -559,7 +561,7 @@ export default class Trigger extends React.Component {
         <ContainerRender
           parent={this}
           visible={popupVisible}
-          autoMount={false}
+          autoMount={props.autoMount}
           forceRender={props.forceRender}
           getComponent={this.getComponent}
           getContainer={this.getContainer}
