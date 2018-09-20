@@ -21501,7 +21501,7 @@ var Trigger = function (_React$Component) {
         {
           parent: this,
           visible: popupVisible,
-          autoMount: false,
+          autoMount: props.autoMount,
           forceRender: props.forceRender,
           getComponent: this.getComponent,
           getContainer: this.getContainer
@@ -21550,6 +21550,7 @@ Trigger.propTypes = {
   popupPlacement: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
   builtinPlacements: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
   popupTransitionName: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string, __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object]),
+  autoMount: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
   popupAnimation: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.any,
   mouseEnterDelay: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
   mouseLeaveDelay: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
@@ -21578,6 +21579,7 @@ Trigger.defaultProps = {
   afterPopupVisibleChange: noop,
   onPopupAlign: noop,
   popupClassName: '',
+  autoMount: false,
   mouseEnterDelay: 0,
   mouseLeaveDelay: 0.1,
   focusDelay: 0,
